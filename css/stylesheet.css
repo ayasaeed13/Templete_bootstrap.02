@@ -1,0 +1,642 @@
+/*General styling*/
+*{
+    box-sizing:border-box;
+}
+:root{
+    --first-color:#000;
+    --second-color:#e65f78;
+}
+body{
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: .5px;
+    word-wrap: break-word;
+    font-weight: 400;
+    background-color: #fff;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+.row{
+    --bs-gutter-y:1.5rem;
+}
+
+.bg-white{
+    background-color: #fff;
+}
+.second-color{
+    color: #e65f78;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    outline: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #000;
+    line-height: 1.4;
+    font-family: 'Poppins', sans-serif;
+}
+h1{
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.bg-grey{
+     background-color: #f9f9f9;
+}
+.title-box{
+    margin-bottom:4rem;
+}
+.text-bold{
+    font-weight: bold;
+}
+/*navigation bar */
+.navbar {
+    background:#fff;/*it must be light mode after scroll by using js*/
+    transition: all 0.1s;
+    z-index: 997;
+}
+ .navbar-nav .nav-item{
+    text-transform: capitalize;
+    letter-spacing: 0.4px;
+    font-size: 1rem;
+    font-family: 'Alegreya', serif;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+.navbar-nav ul li {
+    margin: 0 20px 0 0;
+}
+.navbar-dark .navbar-nav .nav-link{
+    color: #000 !important;
+}
+.navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .show>.nav-link{
+    color:#e65f78 !important ;
+}
+.navbar-expand-lg .navbar-nav .nav-link:hover{
+    color: #e65f78 !important;
+    transition: all ease 0.5s;
+}
+.navbar-brand{
+    background-image: url(../images/dark.png);
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+}
+.subtitle-a{
+    color: var(--second-color);
+    margin-bottom: 4px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.title-a {
+    font-size: 30px;
+    font-weight: 800;
+
+}
+.pad{
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+.ico{
+    margin-right: 0.7rem;
+}
+/*header*/
+.header{
+    background-image: url(../images/1.jpg);
+    background-position:center;
+    background-size:cover;
+    background-position:center;
+}
+.header p {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.header p::after{
+    content: "|";
+    animation-name: typing;
+    animation-duration: 8s;
+    animation-iteration-count:infinite ;
+}
+.overlay-head{
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0px;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+}
+.inner-img{
+    width: 170px;
+    height: 170px;
+    margin-bottom: 2rem;
+}
+.inner-img img {
+    border:5px solid rgb(255 255 255 / 8%);
+}
+.switch{
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    background-color: #000;
+    right: 0;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1999;
+}
+.switch .fa {
+    color: #fff;
+    font-size: 28px;
+}
+/*about*/
+.about-heading::after{
+    content: "|";
+    animation-name: about;
+    animation-duration: 8s;
+    animation-iteration-count:infinite ;
+    color: var(--second-color);
+}
+.about-heading{
+    margin-bottom: 30px;
+}
+.btn a {
+    color: #fff;
+}
+#about  .text  {
+    padding: 0 2rem;
+}
+#about ul li {
+    margin: 0 0 10px;
+}
+#about .member {
+    position: relative;
+}
+#about .member::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 10px solid black;
+    z-index: -10;
+    top: 30px;
+    left: 20px;
+}
+#about .member:hover #about .member::after{
+    top:50px;
+}
+/*services*/
+.inner{
+    box-shadow: 0 0 20px rgb(0 0 0 / 9%);
+    padding: 60px 40px 53px;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+}
+.inner h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.inner .icon {
+    width: 50px;
+    height: 50px;
+    color: #e65f78;
+    margin-bottom: 17px;
+}
+.inner  i {
+    font-size: 3rem;
+}
+.inner p {
+    width: 75%;
+}
+.service-end {
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 5rem;
+
+}
+ #services .service-end a:hover .service-end a::before{
+    background: rgba(0,0,0,1);
+}
+.service-end a {
+    position: relative;
+    color: #000;
+}
+.service-end a::before{
+    content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: auto;
+    right: 0;
+    bottom:0;
+    background: rgba(0,0,0,.2);
+}
+ #news .details p  a:hover{
+    color: #e65f78 !important;
+}
+/*portfolio*/
+#portfolio .member img {
+    width: 296px;
+    height: 296px;
+}
+#portfolio .nav-link{
+    color: black;
+    outline: none;
+    border:none;
+    text-transform: capitalize;
+    transition: 0.5s ease;
+}
+#portfolio .nav-tabs .nav-link.active{
+    color: #e65f78;
+}
+#portfolio .nav-link:hover{
+    color: #e65f78;
+}
+.nav-tabs{
+    border:none;
+}
+#portfolio ul li {
+    font-family: 'Poppins', sans-serif;
+}
+ #portfolio .member img {
+    transition: all 0.2s;
+}
+#portfoli .member:hover img {
+    transform:scale(1.25);
+}
+#portfoli .img-fluid{
+    max-width: 100%;
+    height:auto;
+}
+#portfoli .member{
+    margin-bottom: 3rem;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+#portfoli .member{
+    display: block;
+    overflow: hidden;
+}
+/*counter*/
+.overlay-mf{
+    background-color:rgba(0, 0, 0, 0.6);
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+}
+.section-counter{
+    background-image: url(../images/raveena.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
+.conter-icon{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #cde1f8;
+    margin-bottom: 1rem;
+}
+.counter-text{
+    color: #fff;
+    text-align: center;
+}
+.overlay-mf{
+    background-color:transparent;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+}
+.fa-check,.fa-book-journal-whills ,.fa-user-group ,.fa-award{
+    color: #fff;
+    font-size: 1.5rem;
+}
+.counter-container{
+    padding: 6rem 0;
+}
+.para-counter{
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 7px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+/*news*/
+.work-box img {
+    transition: all 0.2s;
+}
+.work-box:hover img {
+    transform: rotate(3deg) scale(1.05);
+}
+.img-fluid{
+    max-width: 100%;
+    height:auto;
+}
+.work-box{
+    margin-bottom: 3rem;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.work-image{
+    display: block;
+    overflow: hidden;
+}
+.work-text{
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    display: inline-block;
+    padding-top: 2rem;
+}
+.work-text:hover{
+    color: #e65f78;
+}
+.btn{
+    text-decoration: none;
+    color: #fff;
+    background-color: #e65f78;
+    display: inline-block;
+    padding: 12px 45px;
+    overflow: hidden;
+    border-radius: 0;
+}
+/*contact touch*/
+.form-control{   
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    padding: 10px 15px;
+}
+#touch .form-group {
+    justify-content: flex-start !important;
+}
+/*footer*/
+.footer{
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    background-color: #000;
+    padding: 80px 0;
+}
+.footer p{
+    color: #fff;
+}
+.footer .socials ul li {
+    margin: 0 15px 0 0 !important;
+}
+.footer .socials ul li a{
+    color: #fff;
+}
+/*about*/
+ #About .member{
+    position: relative;
+    max-width: 100%;
+}
+ #about .member-caption{
+  position: absolute;
+  top: 10%;
+  right: 0;
+  left: 5%;
+  bottom: 0;
+  width: 100%;
+  transition: left 1s ease;
+  border: #000 solid 10px;
+  width:335px;
+  height: 365px;
+  z-index: -2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* key frames */
+@keyframes about {
+    1% {content:"";}
+    4% {content:" F ";}
+    5% {content:" Fr ";}
+    6% {content:" Fre ";}
+    7% {content:" Free ";}
+    8% {content:" Free L ";}
+    9% {content:" Free La ";}
+    10% {content:" Free Lan ";}
+    11% {content:" Free Lanc";}
+    12% {content:" Free Lance";}
+    13% {content:" Free Lancer";}
+    14% {content:" Free Lancer";}
+    15% {content:" Free Lancer";}
+    16% {content:" Free Lancer";}
+    17% {content:" Free Lance";}
+    18% {content:" Free Lanc";}
+    19% {content:" Free Lan";}
+    20% {content:" Free La";}
+    21% {content:" Free L";}
+    22% {content:" Free ";}
+    23% {content:" Fre";}
+    24% {content:" Fr ";}
+    24% {content:"";}
+    26% {content:"";}
+    27% {content:" w ";}
+    28% {content:" we ";}
+    29% {content:" web ";}
+    30% {content:" web d";}
+    31% {content:" web de ";}
+    32% {content:" web dev ";}
+    33% {content:" web deve ";}
+    34% {content:" web devel ";}
+    35% {content:" web develo ";}
+    36% {content:" web develop ";}
+    37% {content:" web develope ";}
+    38% {content:" web developer ";}
+    39% {content:" web developer ";}
+    40% {content:" web developer ";}
+    41% {content:" web develope ";}
+    42% {content:" web develop ";}
+    43% {content:" web develo ";}
+    44% {content:" web devel ";}
+    45% {content:" web deve ";}
+    46% {content:" web dev ";}
+    47% {content:" web de ";}
+    48% {content:" web d ";}
+    49% {content:" web ";}
+    50% {content:" we ";}
+    51% {content:" w ";}
+    52% {content:" P  ";}
+    53% {content:" Ph ";}
+    54% {content:" Pho ";}
+    55% {content:" Phot ";}
+    56% {content:" Photo ";}
+    57% {content:" Photog ";}
+    58% {content:" Photogr ";}
+    59% {content:" Photogra ";}
+    60% {content:" Photograp ";}
+    61% {content:" Photograph ";}   
+    62% {content:" Photographe ";}
+    63% {content:" Photographer ";}
+    64% {content:" Photographer ";}
+    65% {content:" Photographer ";}
+    66% {content:" Photographe ";}
+    67% {content:" Photograph ";}
+    68% {content:" Photograp ";}
+    69% {content:" Photogra ";}
+    70% {content:" Photogr ";}
+    71% {content:" Photog ";}
+    72% {content:" Photo ";}
+    73% {content:" Phot ";}
+    74% {content:" Pho ";}
+    75% {content:" Ph ";}
+    76% {content:" P ";}
+    77% {content:" ";}
+    } 
+    @keyframes typing{
+        1% {content:" I'm a |";}
+        2% {content:" I'm a |";}
+        3% {content:" I'm a |";}
+        4% {content:" I'm a F |";}
+        5% {content:" I'm a Fr |";}
+        6% {content:" I'm a Fre |";}
+        7% {content:" I'm a Free |";}
+        8% {content:" I'm a Free L |";}
+        9% {content:" I'm a Free La |";}
+        10% {content:" I'm a Free Lan |";}
+        11% {content:" I'm a Free Lanc|";}
+        12% {content:" I'm a Free Lance|";}
+        13% {content:" I'm a Free Lancer|";}
+        14% {content:" I'm a Free Lancer|";}
+        15% {content:" I'm a Free Lancer|";}
+        16% {content:" I'm a Free Lancer|";}
+        17% {content:" I'm a Free Lance|";}
+        18% {content:" I'm a Free Lanc|";}
+        19% {content:" I'm a Free Lan|";}
+        20% {content:" I'm a Free La|";}
+        21% {content:" I'm a Free L|";}
+        22% {content:" I'm a Free |";}
+        23% {content:" I'm a Fre|";}
+        24% {content:" I'm a Fr |";}
+        24% {content:" I'm  |";}
+        26% {content:" I'm a |";}
+        27% {content:" I'm a w |";}
+        28% {content:" I'm a we |";}
+        29% {content:" I'm a web |";}
+        30% {content:" I'm a web d|";}
+        31% {content:" I'm a web de |";}
+        32% {content:" I'm a web dev |";}
+        33% {content:" I'm a web deve |";}
+        34% {content:" I'm a web devel |";}
+        35% {content:" I'm a web develo |";}
+        36% {content:" I'm a web develop |";}
+        37% {content:" I'm a web develope |";}
+        38% {content:" I'm a web developer |";}
+        39% {content:" I'm a web developer |";}
+        40% {content:" I'm a web developer |";}
+        41% {content:" I'm a web develope |";}
+        42% {content:" I'm a web develop |";}
+        43% {content:" I'm a web develo |";}
+        44% {content:" I'm a web devel |";}
+        45% {content:" I'm a web deve |";}
+        46% {content:" I'm a web dev |";}
+        47% {content:" I'm a web de |";}
+        48% {content:" I'm a web d |";}
+        49% {content:" I'm a web |";}
+        50% {content:" I'm a we |";}
+        51% {content:" I'm a w |";}
+        52% {content:" I'm a P  |";}
+        53% {content:" I'm a Ph |";}
+        54% {content:" I'm a Pho |";}
+        55% {content:" I'm a Phot |";}
+        56% {content:" I'm a Photo |";}
+        57% {content:" I'm a Photog |";}
+        58% {content:" I'm a Photogr |";}
+        59% {content:" I'm a Photogra |";}
+        60% {content:" I'm a Photograp |";}
+        61% {content:" I'm a Photograph |";}   
+        62% {content:" I'm a Photographe |";}
+        63% {content:" I'm a Photographer |";}
+        64% {content:" I'm a Photographer |";}
+        65% {content:" I'm a Photographer |";}
+        66% {content:" I'm a Photographe |";}
+        67% {content:" I'm a Photograph |";}
+        68% {content:" I'm a Photograp |";}
+        69% {content:" I'm a Photogra |";}
+        70% {content:" I'm a Photogr |";}
+        71% {content:" I'm a Photog |";}
+        72% {content:" I'm a Photo |";}
+        73% {content:" I'm a Phot |";}
+        74% {content:" I'm a Pho |";}
+        75% {content:" I'm a Ph |";}
+        76% {content:" I'm a P |";}
+        77% {content:" I'm a |";}
+        } 
